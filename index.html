@@ -34,11 +34,9 @@
 		</div>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js"></script>
-
-		<script src="Detector.js"></script>
-		<script src="OrbitControls.js"></script>
-
-		<script src="Cloth.js"></script>
+		<script src="js/Detector.js"></script>
+		<script src="js/OrbitControls.js"></script>
+		<script src="js/Cloth.js"></script>
 
 		<script>
 			/* testing cloth simulation */
@@ -93,7 +91,7 @@
 				scene.add( light );
 				// cloth material
 				var loader = new THREE.TextureLoader();
-				var clothTexture = loader.load( 'circuit_pattern.png' );
+				var clothTexture = loader.load( 'borobila.png' );
 				clothTexture.anisotropy = 16;
 				var clothMaterial = new THREE.MeshLambertMaterial( {
 					map: clothTexture,
