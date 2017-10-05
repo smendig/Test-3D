@@ -91,7 +91,7 @@
 				scene.add( light );
 				// cloth material
 				var loader = new THREE.TextureLoader();
-				var clothTexture = loader.load( 'borobila.png' );
+				var clothTexture = loader.load( 'img/borobila.png' );
 				clothTexture.anisotropy = 16;
 				var clothMaterial = new THREE.MeshLambertMaterial( {
 					map: clothTexture,
@@ -118,7 +118,7 @@
 				sphere.receiveShadow = true;
 				scene.add( sphere );
 				// ground
-				var groundTexture = loader.load( 'grasslight-big.jpg' );
+				var groundTexture = loader.load( 'img/grasslight-big.jpg' );
 				groundTexture.wrapS = groundTexture.wrapT = THREE.RepeatWrapping;
 				groundTexture.repeat.set( 25, 25 );
 				groundTexture.anisotropy = 16;
