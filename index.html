@@ -35,11 +35,10 @@
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js"></script>
 
-		<script src="js/Detector.js"></script>
-		<script src="js/controls/OrbitControls.js"></script>
-		<script src="js/libs/stats.min.js"></script>
+		<script src="Detector.js"></script>
+		<script src="OrbitControls.js"></script>
 
-		<script src="js/Cloth.js"></script>
+		<script src="Cloth.js"></script>
 
 		<script>
 			/* testing cloth simulation */
@@ -59,7 +58,7 @@
 				pins = pinsFormation[ ~~ ( Math.random() * pinsFormation.length ) ];
 			}
 			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
-			var container, stats;
+			var container;
 			var camera, scene, renderer;
 			var clothGeometry;
 			var sphere;
@@ -179,10 +178,6 @@
 				controls.maxPolarAngle = Math.PI * 0.5;
 				controls.minDistance = 1000;
 				controls.maxDistance = 5000;
-				// performance monitor
-				stats = new Stats();
-				container.appendChild( stats.dom );
-				//
 				window.addEventListener( 'resize', onWindowResize, false );
 				sphere.visible = ! true;
 			}
@@ -202,7 +197,6 @@
 				windForce.multiplyScalar( windStrength );
 				simulate( time );
 				render();
-				stats.update();
 			}
 			function render() {
 				var p = cloth.particles;
